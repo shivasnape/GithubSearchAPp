@@ -12,12 +12,20 @@
     android:padding="10dp"
     tools:context=".view.SecondFragment">
 
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@color/black" />
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="5dp"
         android:text="Name"
+        android:layout_marginTop="15dp"
         android:textColor="@color/black"
         android:textSize="12sp" />
 

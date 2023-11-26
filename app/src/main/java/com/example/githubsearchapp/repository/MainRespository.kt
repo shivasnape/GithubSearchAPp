@@ -49,6 +49,7 @@ class MainRespository(val apiService: APIService, val database : AppDatabase) : 
 
                 val data = RepoDetailsEntity()
                 data.name = it.repository.name
+                data.description = it.repository.description
                 data.full_name = it.repository.full_name
                 data.html_url = it.repository.html_url
                 data.avatar_url = it.repository.owner?.avatar_url?:"-"

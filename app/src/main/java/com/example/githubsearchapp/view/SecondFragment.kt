@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.example.githubsearchapp.R
 import com.example.githubsearchapp.database.entity.RepoDetailsEntity
 import com.example.githubsearchapp.databinding.FragmentSecondBinding
@@ -78,6 +79,10 @@ class SecondFragment : Fragment(), KodeinAware {
 
         mReceivedData?.contributors_url?.let {
             loadContributers(it)
+        }
+
+        mReceivedData?.avatar_url?.let {
+            Glide.with(requireContext()).load(it).into(binding.imgAvatar)
         }
 
 

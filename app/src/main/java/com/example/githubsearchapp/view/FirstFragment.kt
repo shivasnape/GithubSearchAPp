@@ -64,10 +64,9 @@ class FirstFragment : Fragment(), KodeinAware, OnItemListener {
             }
         })
 
-
-
-
-
+        if (!requireContext().isNetworkAvailable()) {
+            getDataFromDB()
+        }
     }
 
     private fun getData(query: String?) {
